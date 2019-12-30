@@ -15,12 +15,12 @@ SimpleCov.start do
   track_files "lib/**/*.rb"
 end
 
-$LOAD_PATH.unshift File.expand_path("../lib", __dir__)
-require "minitest/fs"
-
 require "minitest/autorun"
 require "minitest/reporters"
 Minitest::Reporters.use!([
   Minitest::Reporters::DefaultReporter.new(color: true),
   # Minitest::Reporters::SpecReporter.new,
 ])
+
+$LOAD_PATH.unshift File.expand_path("../lib", __dir__)
+require "minitest_fs"
