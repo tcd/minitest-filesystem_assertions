@@ -1,5 +1,5 @@
 module Minitest
-  module Fs
-    VERSION = "0.1.0"
+  module FS
+    VERSION = "0.1.0".freeze
   end
 end

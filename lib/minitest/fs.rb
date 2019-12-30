@@ -1,8 +1,7 @@
 require "minitest/fs/version"
 
 module Minitest
-  module Fs
-    class Error < StandardError; end
-    # Your code goes here...
+  # Assertions for your file system.
+  module FS
   end
 end
