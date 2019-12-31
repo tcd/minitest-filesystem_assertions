@@ -23,4 +23,13 @@ Minitest::Reporters.use!([
 ])
 
 $LOAD_PATH.unshift File.expand_path("../lib", __dir__)
-require "minitest_fs"
+require "minitest/filesystem_assertions"
+require "tmpdir"
+require "fileutils"
+
+module Minitest::Assertions
+  def assert_nothing_raised()
+    flunk("assert_nothing_raised requires a block to capture errors.") unless block_given?
+    yield
+  end
+end
